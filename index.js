@@ -4,18 +4,16 @@ const myfil = require(./index.html);
 const app = express();
 const port = process.env.PORT || 3000;
 
-const myObj=[
-    {
-        name:'tk',
-        age:34
-    },
-    ]
+const myObj={
+        'name':'tk',
+        'age':'34'
+    }
 
 app.get('/',(req,res)=>{
     res.send(myfil);
 })
 app.get('/api',(req,res)=>{
-    res.send(myObj);
+    res.json(myObj);
 })
 
 app.listen(port);
