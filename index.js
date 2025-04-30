@@ -1,16 +1,15 @@
 require('dotenv').config();
 const express = require('express');
-const myfil = require(./index.html);
 const app = express();
 const port = process.env.PORT || 3000;
 
-const myObj={
+let myObj={
         'name':'tk',
         'age':'34'
     }
 
 app.get('/',(req,res)=>{
-    res.send(myfil);
+    res.send("<h2>main page</h2>");
 })
 app.get('/api',(req,res)=>{
     res.json(myObj);
