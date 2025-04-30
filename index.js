@@ -14,5 +14,8 @@ const myObj=[
 app.get('/',(req,res)=>{
     res.send(myfil);
 })
+app.get('/api',(req,res)=>{
+    res.send(myObj);
+})
 
 app.listen(port);
