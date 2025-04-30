@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,7 +10,7 @@ let myObj={
     }
 
 app.get('/',(req,res)=>{
-    res.type('html').send("<h2>main page</h2>");
+    res.send(path.join(__dirname,index.html));
 })
 app.get('/api',(req,res)=>{
     res.json(myObj);
