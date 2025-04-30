@@ -9,7 +9,7 @@ let myObj={
     }
 
 app.get('/',(req,res)=>{
-    res.send("<h2>main page</h2>");
+    res.type('html').send("<h2>main page</h2>");
 })
 app.get('/api',(req,res)=>{
     res.json(myObj);
